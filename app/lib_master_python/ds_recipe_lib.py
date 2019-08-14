@@ -78,11 +78,11 @@ def login():
     try:
         r = requests.get(ds_api_login_url, headers=ds_headers)
     except requests.exceptions.RequestException as e:
-        return ({'ok': false, 'msg': "Error calling DocuSign login: " + e})
+        return ({'ok': False, 'msg': "Error calling DocuSign login: " + e})
         
     status = r.status_code
     if (status != 200): 
-        return ({'ok': false, 'msg': "Error calling DocuSign login, status is: " + str(status)})
+        return ({'ok': False, 'msg': "Error calling DocuSign login, status is: " + str(status)})
 
     # get the baseUrl and accountId from the response body
     response = r.json()
