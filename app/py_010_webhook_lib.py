@@ -52,6 +52,7 @@ def send():
     # STEP 2 - Create and send envelope with eventNotification
     #
     webhook_url = ds_recipe_lib.get_base_url() + webhook_path
+    webhook_url = webhook_url.replace("http","https")
     event_notification = {"url": webhook_url,
         "loggingEnabled": "true", # The api wants strings for true/false
         "requireAcknowledgment": "true",
