@@ -184,7 +184,7 @@ def get_base_url():
     parts = script_url.split("/")
     del parts[-1]
     url = '/'.join(map(str, parts))
-    return url
+    return url.replace('http','https')
 
 def get_script_url():
     # Dynamically determine the script's url
