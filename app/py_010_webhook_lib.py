@@ -21,6 +21,7 @@ ds_integration_id = "***"
 ds_account_id = False
 doc_document_path = "app/static/sample_documents_master/NDA.pdf"
 doc_document_name = "NDA.pdf"
+doc_document_name2 = "NDA2.pdf"
 webhook_path = "/webhook"
 ds_signer1_email = "***"
 ds_signer1_name = "***"
@@ -90,6 +91,8 @@ def send():
     # File contents provided here instead of a multi-part request
     docs = [{"documentId": "1", 
             "name": doc_document_name,
+            "documentBase64": base64.b64encode(file_contents)},{"documentId": "2", 
+            "name": doc_document_name2,
             "documentBase64": base64.b64encode(file_contents)}]
     
     signers = [{"email": ds_signer1_email,
