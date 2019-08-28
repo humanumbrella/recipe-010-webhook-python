@@ -58,7 +58,7 @@ def send():
         "requireAcknowledgment": "true",
         "useSoapInterface": "false",
         "includeCertificateWithSoap": "false",
-        "signMessageWithX509Cert": "false",
+        "signMessageWithX509Cert": "true",
         "includeDocuments": "true",
         "includeEnvelopeVoidReason": "true",
         "includeTimeZone": "true",
