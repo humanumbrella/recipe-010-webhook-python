@@ -190,7 +190,7 @@ def    get_envelope_dir(envelope_id):
     return envelope_dir
 
 def envelope_id_to_dir(envelope_id):
-    return "E" + envelope_id
+    return "E"
 
 ########################################################################
 ########################################################################
